@@ -1,0 +1,5 @@
+{
+  "name": "DocuMind Verifier",
+  "description": "An AI-powered application to analyze DOCX documents for discrepancies, text errors, and logical inconsistencies. Upload your project document, and let the AI provide a detailed verification report.",
+  "requestFramePermissions": []
+}
