@@ -28,7 +28,7 @@ const App: React.FC = () => {
             let errorMessage = "分析文档时发生未知错误。";
             if (e instanceof Error) {
                  if (e.message.includes("Unsupported MIME type")) {
-                    errorMessage = "上传的文件格式不受支持。请尝试使用DOCX、PDF或TXT等常见文档类型。";
+                    errorMessage = "上传的文件格式不受支持。请尝试使用 DOCX 或 TXT 文件。";
                 } else if (e.message.includes("400")) {
                     errorMessage = "请求被拒绝。文件可能已损坏或格式不受支持。";
                 }
@@ -50,7 +50,7 @@ const App: React.FC = () => {
                     <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                         <h2 className="text-xl font-semibold text-cyan-400 mb-4">上传文档</h2>
                         <p className="text-slate-400 mb-6">
-                            选择一个文档文件（.docx, .pdf, .txt等）进行分析。AI将扫描内容差异、语法错误和逻辑不一致之处。
+                            选择一个文档文件（.docx, .txt等）进行分析。AI将扫描内容差异、语法错误和逻辑不一致之处。
                         </p>
                         <FileUpload onFileSelect={handleFileAnalysis} disabled={isLoading} />
                     </div>
@@ -74,7 +74,7 @@ const App: React.FC = () => {
                 </div>
             </main>
             <footer className="text-center py-4 mt-8 text-slate-500 text-sm">
-                <p>由 Gemini AI 驱动。 &copy; 2024 DocuMind Verifier.</p>
+                <p>由 AI 驱动。 &copy; 2024 DocuMind Verifier.</p>
             </footer>
         </div>
     );

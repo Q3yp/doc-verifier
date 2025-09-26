@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback, useRef } from 'react';
 import { UploadIcon } from './icons';
 
@@ -57,7 +56,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({ onFileSelect, disabled }
                 ref={fileInputRef}
                 type="file"
                 className="hidden"
-                accept=".docx,.pdf,.txt,.md,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,text/markdown"
+                accept=".docx,.txt,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain"
                 onChange={handleChange}
                 disabled={disabled}
             />
@@ -66,7 +65,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({ onFileSelect, disabled }
                 <p className="mb-2 text-sm">
                     <span className="font-semibold text-cyan-400">点击上传</span> 或拖放文件
                 </p>
-                <p className="text-xs text-slate-500">支持 DOCX, PDF, TXT 等格式</p>
+                <p className="text-xs text-slate-500">支持 DOCX 和 TXT 格式</p>
             </div>
         </div>
     );
